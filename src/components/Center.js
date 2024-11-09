@@ -1,0 +1,158 @@
+import React, { useEffect, useRef } from 'react'
+import '../App.css'
+import plant from './image/SliderPage/plant.jpg'
+import den from './image/SliderPage/img3.jpg'
+function Center() {
+    let runonce=1;
+    let items=[];
+    let sldimg=[]
+    useEffect(() => {
+        items=document.querySelectorAll(".hidden");
+        sldimg=document.querySelectorAll(".hiddon");
+        if(runonce===1){
+            r_once();
+            runonce=0;
+        }
+    }, []);
+
+    const center_component = useRef(null);
+
+    // observer
+    const observer=new IntersectionObserver((entries)=>{
+        // console.log(entries);
+        entries.forEach(element => {
+            if(element.isIntersecting){
+                element.target.classList.add('show');
+                // console.log("bulaya mujhe");
+            }
+            // else{
+            //     element.target.classList.remove('show');
+            // }
+        });
+    });
+
+    const r_once=()=>{
+        items.forEach(el => {
+            observer.observe(el);
+        });
+        observer.observe(sldimg[0]);
+    }
+
+  return (
+    <div ref={center_component} >
+    {/* <!-- Top Feature Start --> */}
+    <div className="container-fluid top-feature py-5 pt-lg-0">
+        <div className="container py-5 pt-lg-0">
+            <div className="row gx-0">
+                <div className="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div className=" shadow d-flex align-items-center h-100 px-5" style={{minHeight: '160px',backgroundColor:'rgba(255,255,255,.1)',backdropFilter:'blur(30px)',color:'#ffffffb5'}}>
+                        <div className="d-flex">
+                            <div className="flex-shrink-0 btn-lg-square rounded-circle bg-lgreen">
+                                <i className="fa fa-info text-lgreen"></i>
+                            </div>
+                            <div className="ps-3">
+                                <h4>Hey There</h4>
+                                <span>Eco-Tracker is Here</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div className="shadow d-flex align-items-center h-100 px-5" style={{minHeight: '160px',backgroundColor:'rgba(255,255,255,.1)',backdropFilter:'blur(30px)',color:'#ffffffb5'}}>
+                        <div className="d-flex">
+                            <div className="flex-shrink-0 btn-lg-square rounded-circle bg-lgreen">
+                                <i className="fa fa-users text-lgreen"></i>
+                            </div>
+                            <div className="ps-3">
+                                <h4>Join Our Team</h4>
+                                <span>Future of Sustainable Development Depends on Us</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div className="shadow d-flex align-items-center h-100 px-5" style={{minHeight: '160px',backgroundColor:'rgba(255,255,255,.1)',backdropFilter:'blur(30px)',color:'#ffffffb5'}}>
+                        <div className="d-flex">
+                            <div className="flex-shrink-0 btn-lg-square rounded-circle bg-lgreen">
+                                <i className="fa fa-phone text-lgreen"></i>
+                            </div>
+                            <div className="ps-3">
+                                <h4>Contact Us</h4>
+                                <span>91-7976519470 <br />yo.hingorani@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/* <!-- Top Feature End --> */}
+
+    {/* <!-- About Start --> */}
+    <div  className="container-xxl py-5">
+        <div className="container">
+            <div className="row g-5 align-items-end">
+                <div className="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <img className="img-fluid hiddon rounded" data-wow-delay="0.1s" src={plant}/>
+                </div>
+                <div className="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 className="display-1 text-lgreen1 f-el hidden mb-0">HOW TO HELP</h1>
+                    <p className="text-lgreen1 s-el hidden mb-4">Check Your Emissions</p>
+                    <h1 style={{color:'darkorange',textShadow:'0 5px 10px #0004'}} className="display-5 hidden t-el mb-4">What is a Carbon Footprint?</h1>
+                    <p style={{color:'#e9ecef',fontSize:'1rem',fontWeight:'400',textShadow:'0 5px 10px #0004'}} className="fo-el hidden mb-4">A carbon footprint is the total amount of greenhouse gases (including carbon dioxide and methane) that are generated by our actions.
+                    The average carbon footprint for a person in India in 2022 is...    <span style={{textShadow:'0 5px 10px #0004',color:'#dc3545',cursor:'pointer',fontWeight:'500'}}>Read More</span></p>
+                    <a className="buuto hidden py-3 fi-el px-4" href="">Explore More</a>
+                </div>
+                <div className="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <div className="row g-5">
+                        <div style={{minHeight: '160px',backgroundColor:'rgba(255,255,255,.1)',backdropFilter:'blur(30px)',color:'#ffffffb5'}} className="col-12 col-sm-6 col-lg-12 hidden">
+                            <div className=" ps-4">
+                                <i className="fa fa-award fa-3x hiddon text-lgreen mb-3"></i>
+                                <h4 className="mb-3" >Award Winning</h4>
+                                <span className=''>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</span>
+                            </div>
+                        </div>
+                        <div style={{minHeight: '160px',backgroundColor:'rgba(255,255,255,.1)',backdropFilter:'blur(30px)',color:'#ffffffb5'}} className="hidden col-12 col-sm-6 col-lg-12">
+                            <div className=" ps-4">
+                                <i className="fa fa-use fa-3x text-lgreen mb-3"></i>
+                                <h4 className="mb-3">Dedicated Team</h4>
+                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/* <!-- About End --> */}
+
+
+    {/* <!-- Facts Start --> */}
+    <div className="stati container-fluid facts my-5">
+        <div style={{backgroundColor:'rgba(255,255,255,.1)',backdropFilter:'blur(30px)'}} className=" py-5">
+            <div className="heton row">
+                <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <h1 className="display-4 text-white" data-toggle="counter-up">5.27 Tons</h1>
+                    <span className="fs-5 fw-semi-bold text-light">Electricity and heat</span>
+                </div>
+                <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <h1 className="display-4 text-white" data-toggle="counter-up">4.64 Tons</h1>
+                    <span className="fs-5 fw-semi-bold text-light">Transport</span>
+                </div>
+                <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 className="display-4 text-white" data-toggle="counter-up">1.31 Tons</h1>
+                    <span className="fs-5 fw-semi-bold text-light">Manufacturing and construction</span>
+                </div>
+                <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 className="display-4 text-white" data-toggle="counter-up">1.14 Tons</h1>
+                    <span className="fs-5 fw-semi-bold text-light">Agriculture & fugituve</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/* <!-- Facts End --> */}
+    </div>
+  )
+}
+
+export default Center

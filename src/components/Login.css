@@ -1,0 +1,196 @@
+.login-background {
+    height: 100vh;
+    /* background: url(./image/SliderPage//lplant.jpg) no-repeat center fixed;
+    background-size: cover; */
+}
+
+.login {
+    width: 50%;
+    height: 100%;
+    /* margin: auto; */
+    /* border: 3px solid white; */
+}
+
+.coni {
+    position: relative;
+    top: 10%;
+    left: 25%;
+    z-index: 100;
+    width: 50%;
+    height: 80%;
+    /* background: black; */
+    perspective: 400px;
+}
+
+.cardi {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(255 255 255 / 15%);
+    /* background: green; */
+    transform-style: preserve-3d;
+    transition: .5s ease-in-out;
+    /* box-shadow: 0 0 30px rgba(0, 0, 0, .5); */
+    /* border-radius: 40px; */
+}
+
+/* .cardi:hover{
+    transform: rotateY(180deg);
+} */
+.cardi-end {
+    transform: rotateY(180deg);
+}
+
+.cardi-front {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    backdrop-filter: blur(40px);
+    row-gap: 1.6rem;
+    padding: 1rem;
+    width: 100%;
+    /* background-color: red; */
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.cardi-back {
+    position: absolute;
+    backdrop-filter: blur(40px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: .6rem;
+    padding: 1rem;
+    /* background: yellow; */
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.cardi h2 {
+    color: #212529 !important;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding: 15px 20px;
+    /* border: 2px solid black; */
+}
+
+.inputbox {
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+    /* border: 2px solid  black; */
+    position: relative;
+    width: 100%;
+    height: 20%;
+    transition: .5s ease-in-out;
+    padding: 2% 1%;
+    /* margin: 5% 0; */
+}
+
+.inputbox input {
+    display: block;
+    font-size: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.5);
+    padding-right: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.inputbox input:not(:placeholder-shown)~label {
+    top: 0 !important;
+    /* transform: translateY(50%); */
+}
+
+.inputbox label {
+    position: absolute;
+    /* border: 2px solid orangered; */
+    top: 50% !important;
+    color: #212529;
+    transform: translateY(-50%);
+    left: 5px;
+    font-weight: 500;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+    position: absolute;
+    right: 8px;
+    color: #212529;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkboxi {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5em;
+    justify-content: space-between;
+    align-items: center;
+    margin: -4% 0;
+    z-index: 700;
+    line-height: 30px !important;
+    /* border: 2px solid palevioletred; */
+}
+
+.clear-css {
+    color: #212529;
+    font-size: .9em;
+    /* border: 2px solid red; */
+    /* background-color: green !important; */
+}
+
+.checkboxi a {
+    color: #212529;
+    /* border: 2px solid red; */
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.checkboxi a:hover {
+    color: #dee2e6;
+}
+
+.button-box {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    /* border:2px solid rgba(255,255,255,.7); */
+    border: none;
+    color: #dee2e6;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* margin: 9% 0; */
+    padding: .6rem;
+    /* border-radius: 30px; */
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: .4s ease;
+}
+
+.button-box:hover {
+    background-color:rgba(0, 0, 0, .4);
+}
+
+.cardi p {
+    color: #adb5bd;
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+/* .cardi p span:hover {font-weight: 600;} */
+.cardi p span {
+    color: darkorange;
+    cursor: pointer;
+    font-weight: 500;
+}

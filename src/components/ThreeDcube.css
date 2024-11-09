@@ -1,0 +1,23 @@
+.ThreeDbody{
+    display: flex;
+    justify-content: center;
+    
+}
+.ThreeDbox{
+    border: 2px solid red;
+    position: relative;
+    width: 240px;
+    /* background-color: red; */
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: 1.5s;
+    transform:perspective(800px) rotateY(60deg);
+}
+.ThreeDcard{
+    /* border: 2px solid black; */
+    
+}
+.imgbox img{
+    /* border: 2px solid black; */
+    max-width: 100%;
+}
