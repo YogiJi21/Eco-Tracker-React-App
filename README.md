@@ -3,6 +3,8 @@
   <img  src="./src/components/image/ecutrac.png" />
 </div>
 A MERN-based application for tracking and calculating CO₂ emissions from daily activities, helping users understand their carbon footprint and providing actionable recommendations for reduction.
+</br>
+</br>
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react&logoColor=white" />
